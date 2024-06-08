@@ -12,18 +12,32 @@
  
  
 <!-- this is our beans -->
-
+	<!-- 1st bean  -->
 	<bean class="com.springcore.Student" name="student1">
-		<property name="studentId">
-			<value>019</value>
+		<property name="studentId" value="019" />
+		<property name="studentName" value="umesh sharma" />
+		<property name="studentAddress" value="india" />
+		
+		<property name="courses">
+			<map>
+				<entry key="Java" value="3-Months" />
+				<entry key="Python" value="" />
+			</map>
 		</property>
 		
-		<property name="studentName">
-			<value>Umesh Sharma</value>
-		</property>
-		
-		<property name="studentAddress">
-			<value>India</value>
+	</bean>
+	
+	<!-- second bean -->
+	<bean class="com.springcore.Student" name="student2">
+		<property name="studentId" value="020" />
+		<property name="studentName" value="Mahesh Sharma" />
+		<property name="studentAddress" value="Ahmedabad" />
+		<property name="subjects">
+		<list>
+			<value>Maths</value>
+			<value>Physics</value>
+			<value>Chemistry</value>
+		</list>
 		</property>
 	</bean>
 
