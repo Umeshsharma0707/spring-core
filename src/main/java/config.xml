@@ -13,6 +13,8 @@
  
 <!-- this is our beans -->
 	<!-- 1st bean  -->
+	
+	
 	<bean class="com.springcore.Student" name="student1">
 		<property name="studentId" value="019" />
 		<property name="studentName" value="umesh sharma" />
@@ -38,6 +40,40 @@
 			<value>Physics</value>
 			<value>Chemistry</value>
 		</list>
+		</property>
+	</bean>
+
+	<bean class="com.springcore.collections.Employee" name="employee1">
+		<property name="name" value="umesh" />
+		<property name="phones">
+			<list>
+				<value>98765432</value>
+				<value>54631864</value>
+				<value>123456789</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>ahmedabad</value>
+				<value>jaipur</value>
+				<value>thane</value>
+				<value>Vadodara</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="java" value="3-Months"/>
+				<entry key="python" value="1-Months" />
+				<entry key="cpp" value="2-Months" />
+			</map>
+		</property>
+		
+		<property name="empProps">
+			<props>
+				<prop key="userNAme">umesh123</prop>
+				<prop key="password">u12345</prop>
+			</props>
 		</property>
 	</bean>
 
