@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+ 
+ 
+<!-- this is our beans -->
+		
+		<bean class="com.springcore.reference.B" name="bRef">
+			<property name="y" value="10" />
+		</bean>
+		
+		<bean class="com.springcore.reference.A" name="aRef">
+			<property name="x" value="5" />
+			<property name="obj">
+				<ref bean="bRef"/>
+			</property>
+		</bean>
+		
+	<!-- person and his address  beans-->
+	
+		<bean class="com.springcore.reference.Address" name="refAddress">
+				<property name="houseNo" value="15" />
+				<property name="societyName" value="royal society" />
+				<property name="city" value="ahmedabad" />
+				<property name="pincode" value="382405" />
+		</bean>
+	
+		<bean class="com.springcore.reference.Person" name="Person">
+			<property name="name" value="umesh" />
+			<property name="phone" value="1234567890" />
+			<property name="address" ref="refAddress" />
+		</bean>
+</beans>
