@@ -27,7 +27,7 @@ public class Burger {
 	
 	@PostConstruct
 	public void start() {
-		System.out.println**************************/"starting method");
+		System.out.println("starting method");
 	}
 	
 	@PreDestroy
