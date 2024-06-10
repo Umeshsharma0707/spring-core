@@ -9,16 +9,21 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
- 
+ <context:annotation-config />
  
 <!-- this is our beans -->
-	
+	<!-- 
 	<bean class="com.springcore.lifecycle.Samosa" name="samosa" init-method="init" destroy-method="destroy">
 		<property name="price" value="30.5" />
 	</bean>
 	
 	<bean class="com.springcore.lifecycle.Pepsi" name="pepsi">
 		<property name="price" value="20" />
-	</bean>
+	</bean> -->
 
+	<bean class="com.springcore.lifecycle.Burger" name="burger">
+		<property name="price" value="50" />
+	</bean>
+	
+	
 </beans>
