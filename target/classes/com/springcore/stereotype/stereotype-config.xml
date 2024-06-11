@@ -24,6 +24,9 @@
  	
   
 <!-- this is our beans -->
-
+	<bean class="com.springcore.stereotype.Teacher" name="teacher" scope="prototype" >
+		<property name="name" value="jay sir" />
+		<property name="salary" value="95000" />
+	</bean>
 
 </beans>
