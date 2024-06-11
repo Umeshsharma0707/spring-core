@@ -12,6 +12,7 @@ public class Student {
 	@Value("Delhi")
 	private String city;
 	
+	@Value("#{temp}")
 	private List<String> addresses;
 	
 	public List<String> getAddresses() {

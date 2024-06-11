@@ -12,8 +12,6 @@ public class Test {
 		Student s = context.getBean("student", Student.class);
 		
 		System.out.println(s);
-		s.setStudentName("umesh");
-		s.setCity("ahmedabad");
-		System.out.println(s);
+		
 	}
 }
