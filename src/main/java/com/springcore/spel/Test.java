@@ -1,6 +1,5 @@
 package com.springcore.spel;
 
-import java.beans.Expression;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,6 +20,7 @@ public class Test {
 		org.springframework.expression.Expression expression = temp.parseExpression("5+5");
 		System.out.println(expression.getValue());
 		
+	
 	}
 	
 }
