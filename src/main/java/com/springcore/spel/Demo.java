@@ -16,11 +16,18 @@ public class Demo {
 	@Value("#{T(java.lang.Math).sqrt(25)}")
 	private double z;
 	
-	@Value("#{T(java.lang.Math).E}")s
+	@Value("#{T(java.lang.Math).E}")
 	private double e;
 	
+	@Value("#{ new java.lang.String('umesh sharma') }")
+	private String name;
 	
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public double getE() {
 		return e;
 	}
@@ -49,7 +56,7 @@ public class Demo {
 	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
 	}
 	
 	
