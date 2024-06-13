@@ -16,7 +16,7 @@ public class Test {
 		
 		
 		s.study();
-		s.getBurger().display();;
+		s.getBurger().display();
 		context.close();
 	}
 }
