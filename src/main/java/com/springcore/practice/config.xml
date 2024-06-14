@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd
+           ">
+       <context:annotation-config />
+
+	<util:list list-class="java.util.ArrayList" id="skillsList">
+		<value>java</value>
+		<value>spring</value>
+		<value>Hibernate</value>
+	</util:list>
+
+	<util:set set-class="java.util.TreeSet" id="addressesSet">
+		<value>ahmedabad</value>
+		<value>delhi</value>
+		<value>rajkot</value>
+	</util:set>
+
+	<util:map id="gamesMap">
+		<entry key="gta" value="open world game" />
+	</util:map>
+
+	<util:properties id="propss">
+		<prop key="database">jdbc:mysql:localhost:3306/database</prop>
+		<prop key="username">umesh123</prop>
+	</util:properties>
+
+	<bean class="com.springcore.practice.Developer" name="developer">
+		<property name="skills" ref="skillsList" />
+		<property name="salary" value="90000.500" />
+		<property name="addresses" ref="addressesSet" />
+
+
+		<property name="games" ref="gamesMap" />
+
+		<property name="props" ref="propss"/> 
+			
+	</bean>
+
+	<bean class="com.springcore.practice.Human" name="human" >
+		<property name="name" value="umesh" />
+		<property name="age" value="21" />
+		<property name="developer" ref="developer" />
+	</bean>
+
+		<bean class="com.springcore.practice.Developer" name="devRef">
+		<constructor-arg name="skills" ref="skillsList" />
+		<constructor-arg name="salary" type="float"
+			value="50000" />
+			<constructor-arg name="addresses" ref="addressesSet" />
+		<constructor-arg name="games" ref="gamesMap" />
+		<constructor-arg name="props" ref="propss" />
+	</bean>
+	
+</beans>
