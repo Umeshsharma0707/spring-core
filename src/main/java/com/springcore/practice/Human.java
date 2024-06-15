@@ -3,11 +3,20 @@ package com.springcore.practice;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 
+@Scope("prototype")
 public class Human {
 	private String name;
 	private int age;
+	
+	@Autowired
+	@Qualifier("dev")
 	private Developer developer;
+	
+	
 	public String getName() {
 		System.out.println("setting human name");
 		return name;

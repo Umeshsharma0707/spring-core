@@ -12,13 +12,14 @@ public class App {
 				new ClassPathXmlApplicationContext("com/springcore/practice/config.xml");
 		
 		
-		Human h1 = context.getBean("human", Human.class);
-		
+		Human h1 = context.getBean("h1", Human.class);
+		Human h2 = context.getBean("h1", Human.class);
 		System.out.println(h1);
 		
 		context.registerShutdownHook();
 		
-		
+		System.out.println(h1.hashCode());
+		System.out.println(h2.hashCode());
 		context.close();
 	}
 	

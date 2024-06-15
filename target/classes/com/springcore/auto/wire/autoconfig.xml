@@ -18,7 +18,7 @@
 		<property name="city" value="Ahmedabad" />
 	</bean>
 	<!-- autowire="byType", autowire="byName", autowire="byName"  -->
-	<bean class="com.springcore.auto.wire.Employee" name="emp1" autowire="constructor">
+	<bean class="com.springcore.auto.wire.Employee" name="emp1" autowire="byName">
 		<property name="name" value="umesh" />
 	</bean>
 

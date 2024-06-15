@@ -46,6 +46,17 @@
 			
 	</bean>
 
+<bean class="com.springcore.practice.Developer" name="dev">
+		<property name="skills" ref="skillsList" />
+		<property name="salary" value="50.500" />
+		<property name="addresses" ref="addressesSet" />
+
+
+		<property name="games" ref="gamesMap" />
+
+		<property name="props" ref="propss"/> 
+			
+	</bean>
 	<bean class="com.springcore.practice.Human" name="human" >
 		<property name="name" value="umesh" />
 		<property name="age" value="21" />
@@ -59,6 +70,11 @@
 			<constructor-arg name="addresses" ref="addressesSet" />
 		<constructor-arg name="games" ref="gamesMap" />
 		<constructor-arg name="props" ref="propss" />
+	</bean>
+	
+	<bean class="com.springcore.practice.Human" name="h1" scope="prototype">
+		<property name="name" value="umesh" />
+		<property name="age" value="21" />
 	</bean>
 	
 </beans>
